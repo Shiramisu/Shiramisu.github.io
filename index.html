@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -47,6 +48,26 @@
             padding: 20px 0;
             text-align: center;
         }
+        .glowing-card {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .glowing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 255, 0.7);
+        }
+        .glowing-card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .glowing-card .card-body {
+            text-align: center;
+            padding: 15px;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +99,7 @@
         </div>
     </section>
     <section id="skills" class="section bg-light">
-        <div class="container" margin="center">
+        <div class="container">
             <h2 class="text-center">Fähigkeiten</h2>
             <ul>
                 <li>Netzwerktechnologien: TCP/IP, DNS, DHCP</li>
@@ -93,10 +114,9 @@
         <div class="container">
             <h2 class="text-center">Portfolio</h2>
             <p class="text-center">Hier sind einige meiner bisherigen Projekte:</p>
-            <!-- Example projects -->
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card glowing-card">
                         <img src="project1.jpg" class="card-img-top" alt="Projekt 1">
                         <div class="card-body">
                             <h5 class="card-title">Projekt 1</h5>
@@ -105,10 +125,19 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card glowing-card">
                         <img src="project2.jpg" class="card-img-top" alt="Projekt 2">
                         <div class="card-body">
                             <h5 class="card-title">Projekt 2</h5>
+                            <p class="card-text">Beschreibung des Projekts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card glowing-card">
+                        <img src="project3.jpg" class="card-img-top" alt="Projekt 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Projekt 3</h5>
                             <p class="card-text">Beschreibung des Projekts.</p>
                         </div>
                     </div>
